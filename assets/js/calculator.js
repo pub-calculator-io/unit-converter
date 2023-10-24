@@ -5,26 +5,30 @@ function calculate(){
   if(!input.valid()) return;
 
   // 2. calculate
-  const fromUnit = LIST_OF_UNITS[UNITS_GROUP].find(unit => unit[0] == FROM_UNIT);
-  const toUnit = LIST_OF_UNITS[UNITS_GROUP].find(unit => unit[0] == TO_UNIT);
-  let from = fromUnit[2];
-  let to = toUnit[2];
+  const from = LIST_OF_UNITS[UNITS_GROUP].find(unit => unit[0] == FROM_UNIT);
+  const to = LIST_OF_UNITS[UNITS_GROUP].find(unit => unit[0] == TO_UNIT);
+  if(!to) return;
+  let fromCoeff = from[2];
+  let toCoeff = to[2];
   let toValue; 
 
-  if(from.indexOf('x') != -1 && to.indexOf('x') != -1){
-    to = toUnit[3];
-    toValue = math.evaluate(to, {x: math.evaluate(from, {x: fromValue})}); // formulas
+  if(fromCoeff.indexOf('x') != -1 && toCoeff.indexOf('x') != -1){
+    // formulas
+    toCoeff = to[3];
+    toValue = math.evaluate(toCoeff, {x: math.evaluate(fromCoeff, {x: fromValue})});
   } else {
-    if(fromUnit[3] && toUnit[3]){
+    if(from[3] && to[3]){
+      // alternative coeffs. (for conversion between similar measurement systems: SI/Imperial/US)
       const re = /(.*\d)(in|oz|mo|tsp|imp\.tsp).*$/;
-      const fromMatch = fromUnit[3].match(re)||[];
-      const toMatch = toUnit[3].match(re)||[];
+      const fromMatch = from[3].match(re)||[];
+      const toMatch = to[3].match(re)||[];
       if(fromMatch[2] == toMatch[2]){
-        from = fromMatch[1];
-        to = toMatch[1];
+        fromCoeff = fromMatch[1];
+        toCoeff = toMatch[1];
       }
     }
-    toValue = math.evaluate(`${fromValue}*(${from})/(${to})`); // coeffs.
+    // coeffs.
+    toValue = math.evaluate(`${fromValue}*(${fromCoeff})/(${toCoeff})`);
   }
 
   // 3. output

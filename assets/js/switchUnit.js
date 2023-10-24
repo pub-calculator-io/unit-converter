@@ -221,7 +221,6 @@ function setNewList(listUnits) {
 			buttonTo.classList.add('selected')
 			buttonTo.click()
 		}
-
 	})
 }
 
@@ -242,5 +241,5 @@ function switchUnit(event, unit) {
 		UNITS_TO_POSTFIX.innerHTML = unit
 		
 	}
-	calculate();
+	window.calculate && calculate();
 }
