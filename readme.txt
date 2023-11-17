@@ -1,6 +1,6 @@
 === Unit Converter by Calculator.iO ===
 Contributors: calculatorio
-Tags: 
+Tags: unit converter, length conversion, temperature conversion, area conversion, volume conversion, weight conversion, time units conversion, metric system, imperial system, International System of Units
 Requires at least: 5.0
 Tested up to: 6.4.0
 Stable tag: 1.0.0
