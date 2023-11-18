@@ -1,4 +1,4 @@
-# Unit Converter WordPress Widget by [Calculator.iO](https://www.calculator.io/ "Calculator.iO Homepage")
+# Unit Converter Widget for WordPress
 
 This free online tool converts common length, temperature, area, volume, weight, and time units.
 
