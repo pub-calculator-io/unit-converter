@@ -1,4 +1,4 @@
-=== Unit Converter by Calculator.iO ===
+=== Unit Converter ===
 Contributors: calculatorio
 Tags: unit converter, length conversion, temperature conversion, area conversion, volume conversion, weight conversion, time units conversion, metric system, imperial system, International System of Units
 Requires at least: 5.0
