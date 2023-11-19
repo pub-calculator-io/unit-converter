@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Unit Converter by www.calculator.io
+Plugin Name: CI Unit converter
 Plugin URI: https://www.calculator.io/unit-converter/
 Description: This free online tool converts common length, temperature, area, volume, weight, and time units.
 Version: 1.0.0
