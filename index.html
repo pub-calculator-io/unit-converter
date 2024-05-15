@@ -1914,16 +1914,16 @@
                 		</label>	</div>
                 	<div class="input-wrapper col">
                 		<div class="row">
-                			<label class="input col   ">
-                				<p class="input__title">From</p>
+                			<label class="input col numbers-to-words-converter,scientific-notation-converter,roman-numeral-converter,height-converter,meters-to-feet-converter,roman-numeral-date-converter  ">
+                				<p class="input__title">Convert From</p>
                 				<div class="input-field row input-field--border-radius-bl-none">
                 					<input type="text" class="input-field__input" placeholder="a"  id="from_value" value="1"  />
                 						<span class="input-field__hint">m</span>
                 				</div>
                 			
                 			
-                			</label>			<label class="input col  input-field--pointer-events-none ">
-                				<p class="input__title">To</p>
+                			</label>			<label class="input col numbers-to-words-converter,scientific-notation-converter,roman-numeral-converter,height-converter,meters-to-feet-converter,roman-numeral-date-converter input-field--pointer-events-none ">
+                				<p class="input__title">Convert To</p>
                 				<div class="input-field row input-field--gray input-field--border-radius-br-none">
                 					<input type="text" class="input-field__input" placeholder="b"  id="to_value" value="0.001"  />
                 						<span class="input-field__hint">m</span>
@@ -1953,13 +1953,16 @@
                 
                 
                 
-                	<button class="button button--primary ml-auto" onclick="calculate(this)">Convert</button>
+                	<button class="button button--primary ml-auto" onclick="calculate(this); animateElements();" data-action="calculate" id="action-button">Convert</button>
                 </div>
                 
                 
+                	<script type="text/javascript" src="./assets/js/lib/math.min.js" async></script>
                 
                 
-                	<script type="text/javascript" src="./assets/js/calculator.js"></script>
+                
+                
+                	<script type="text/javascript" src="./assets/js/calculator.js" defer></script>
                 
             </div>
         </div>
@@ -1975,12 +1978,11 @@
         </svg>
         		<p class="calculator-error__title">There was an error with your calculation.</p>
         	</div>
-        	<div class="col" id="error-list">
-        	</div>
+        	<div class="col" id="error-list"></div>
         </div>        <span id="calculator_result"><div class="calculator-result col">
 	<p class="table-cell table-cell--dark table-cell--only-title">CONVERSION</p>
 	<div class="table-cell table-cell--only">
-		<p class="result-text" id="result">1 Meter = 0.001 Kilometer</p>
+		<p class="result-text animate" id="result">1 Meter = 0.001 Kilometer</p>
 	</div>
 </div></span>
     </div>

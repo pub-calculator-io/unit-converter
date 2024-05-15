@@ -24,7 +24,6 @@ Add the following code to your template where you would like the Unit Converter 
 == Screenshots ==
 
 1. The Unit Converter Input Form.
-2. The Unit Converter Calculation Results.
 
 == Installation ==
 

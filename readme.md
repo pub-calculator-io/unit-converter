@@ -3,7 +3,6 @@
 This free online tool converts common length, temperature, area, volume, weight, and time units.
 
 ![Unit Converter Input Form](/assets/images/screenshot-1.png "Unit Converter Input Form")
-![Unit Converter Calculation Results](/assets/images/screenshot-2.png "Unit Converter Calculation Results")
 
 ## Installation
 

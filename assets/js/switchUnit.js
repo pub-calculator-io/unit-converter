@@ -143,7 +143,7 @@ const LIST_OF_UNITS = {
 		['Day', 'd', '86400'],
 		['Week', 'wk', '7*86400'],
 		['Month', 'mo', '86400*30.4167', '1mo'],
-		['Calendar year', 'y', '365*86400', '12mo'],
+		['Calendar Year', 'y', '365*86400', '12mo'],
 		['Decade', 'dec', '3650*86400', '120mo'],
 		['Century', 'c', '36500*86400', '1200mo'],
 	],
